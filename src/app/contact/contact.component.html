@@ -1,0 +1,30 @@
+<div class="w-75 mx-auto">
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input  #name [(ngModel)]="value2" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <h2>{{value2}}ss</h2>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <!-- <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Email</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Phone</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Massage</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div> -->
+    <button (click)="getValue(name.value)" type="submit" class="btn btn-primary">Send</button>
+  </form>
+</div>
+<!-- <app-child [data]="value2"></app-child> -->
+
+
+<app-child (newItemEvent)="addItem($event)"></app-child>
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
